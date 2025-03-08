@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BuildMaster Pro - Premium Construction Services</title>
+<link rel="stylesheet" href="assets/css/styles.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<script>
+    tailwind.config = {
+    theme: {
+    extend: {
+    colors: {
+    primary: '#0D5772',
+    secondary: '#0CB693'
+    },
+    borderRadius: {
+    'none': '0px',
+    'sm': '4px',
+    DEFAULT: '8px',
+    'md': '12px',
+    'lg': '16px',
+    'xl': '20px',
+    '2xl': '24px',
+    '3xl': '32px',
+    'full': '9999px',
+    'button': '8px'
+    }
+}
+}
+}
+</script>
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+.service-card:hover { transform: translateY(-10px); }
+.project-card:hover .project-overlay { opacity: 1; }
+.testimonial-card { transition: all 0.3s ease; }
+.testimonial-card:hover { transform: scale(1.02); }
+</style>
+</head>
+<body class="bg-white">
+<nav class="fixed w-full bg-white shadow-md z-50">
+<div class="container mx-auto px-6 py-4">
+<div class="flex items-center justify-between">
+<div class="font-['Pacifico'] text-3xl text-primary"> <a href="#" class="font-['Pacifico'] text-3xl text-primary"><img src="assets/images/Nirvana_builders.webp" width="100px" height="100px" alt="logo"></a></div>
+<div class="hidden md:flex space-x-8">
+<a href="#home" class="text-gray-700 hover:text-primary">Home</a>
+<a href="#about" class="text-gray-700 hover:text-primary">About</a>
+<a href="#services" class="text-gray-700 hover:text-primary">Services</a>
+<a href="#projects" class="text-gray-700 hover:text-primary">Projects</a>
+<a href="#contact" class="text-gray-700 hover:text-primary">Contact</a>
+</div>
+<button onclick="showContactModal()" class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-blue-600 transition duration-300">Get Quote</button>
+</div>
+</div>
+</nav>
+<section id="home" class="relative h-screen flex items-center" style="background-image: url('assets/images/silhouette-crane-construction-site-sunset.jpg'); background-size: cover; background-position: center;">
+    <div class="absolute inset-0 opacity-50"></div>
+    <div class="container mx-auto px-6 relative z-10">
+        <div class="max-w-3xl">
+            <h1 class="text-5xl font-bold text-white mb-6">Building Tomorrow's Landmarks Today</h1>
+            <p class="text-xl text-white mb-8">Excellence in construction with over 25 years of industry expertise. We transform visions into reality.</p>
+            <button onclick="showContactModal()" class="bg-primary text-white px-8 py-3 !rounded-button hover:bg-blue-600 transition duration-300 text-lg">Start Your Project</button>
+        </div>
+    </div>
+</section>
+<section id="about" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-6">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+    <div>
+    <img src="assets/images/builderpro_img.jpg" alt="About Us" class="rounded-lg shadow-xl">
+    </div>
+    <div>
+    <h2 class="text-4xl font-bold mb-6">Building Excellence Since 2000</h2>
+    <p class="text-gray-600 mb-6">With over two decades of experience in the construction industry, BuildMaster Pro has established itself as a leader in delivering exceptional construction services. Our commitment to quality, innovation, and customer satisfaction has earned us the trust of countless clients.</p>
+    <div class="grid grid-cols-2 gap-6 mb-8">
+    <div class="flex items-center">
+    <div class="w-12 h-12 flex items-center justify-center bg-primary rounded-full text-white">
+    <i class="ri-building-2-line text-2xl"></i>
+    </div>
+    <div class="ml-4">
+    <h3 class="font-semibold">500+</h3>
+    <p class="text-gray-500">Projects Completed</p>
+    </div>
+    </div>
+    <div class="flex items-center">
+    <div class="w-12 h-12 flex items-center justify-center bg-primary rounded-full text-white">
+    <i class="ri-team-line text-2xl"></i>
+    </div>
+    <div class="ml-4">
+    <h3 class="font-semibold">150+</h3>
+    <p class="text-gray-500">Expert Team</p>
+    </div>
+    </div>
+    </div>
+    <button class="bg-primary text-white px-6 py-3 !rounded-button hover:bg-blue-600 transition duration-300">Learn More</button>
+    </div>
+    </div>
+    </div>
+</section>
+<section id="services" class="py-20">
+<div class="container mx-auto px-6">
+<h2 class="text-4xl font-bold text-center mb-12">Our Services</h2>
+<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="service-card bg-white p-6 rounded-lg shadow-lg transition duration-300">
+<div class="w-16 h-16 flex items-center justify-center bg-secondary/10 rounded-full mb-6">
+<i class="ri-home-4-line text-primary text-2xl"></i>
+</div>
+<h3 class="text-xl font-semibold mb-4">Residential Construction</h3>
+<p class="text-gray-600 mb-4">Custom homes and residential developments built to the highest standards.</p>
+<a href="#" class="text-primary hover:text-blue-600">Learn More →</a>
+</div>
+<div class="service-card bg-white p-6 rounded-lg shadow-lg transition duration-300">
+<div class="w-16 h-16 flex items-center justify-center bg-secondary/10 rounded-full mb-6">
+<i class="ri-building-line text-primary text-2xl"></i>
+</div>
+<h3 class="text-xl font-semibold mb-4">Commercial Construction</h3>
+<p class="text-gray-600 mb-4">Office buildings, retail spaces, and industrial facilities.</p>
+<a href="#" class="text-primary hover:text-blue-600">Learn More →</a>
+</div>
+<div class="service-card bg-white p-6 rounded-lg shadow-lg transition duration-300">
+<div class="w-16 h-16 flex items-center justify-center bg-secondary/10 rounded-full mb-6">
+<i class="ri-tools-line text-primary text-2xl"></i>
+</div>
+<h3 class="text-xl font-semibold mb-4">Renovation</h3>
+<p class="text-gray-600 mb-4">Transform existing spaces with modern renovations and upgrades.</p>
+<a href="#" class="text-primary hover:text-blue-600">Learn More →</a>
+</div>
+<div class="service-card bg-white p-6 rounded-lg shadow-lg transition duration-300">
+<div class="w-16 h-16 flex items-center justify-center bg-secondary/10 rounded-full mb-6">
+<i class="ri-paint-line text-primary text-2xl"></i>
+</div>
+<h3 class="text-xl font-semibold mb-4">Interior Design</h3>
+<p class="text-gray-600 mb-4">Professional interior design and space planning services.</p>
+<a href="#" class="text-primary hover:text-blue-600">Learn More →</a>
+</div>
+</div>
+</div>
+</section>
+<section id="ongoing-projects" class="py-20 bg-gray-50">
+<div class="container mx-auto px-6">
+<h2 class="text-4xl font-bold text-center mb-12">Ongoing Projects</h2>
+<div class="grid md:grid-cols-2 gap-8">
+<div class="bg-white rounded-lg shadow-lg overflow-hidden">
+<img src="assets/images/Urberretreet.png" alt="Project 1" class="w-full h-64 object-cover">
+<div class="p-6">
+<h3 class="text-xl font-semibold mb-2">Nirvana’s Urban Elite commerical space</h3>
+<p class="text-gray-600 mb-4">Luxury apartment complex with 200 units</p>
+<div class="flex justify-between items-center mb-2">
+<span class="text-gray-500">Progress</span>
+<span class="text-primary">75%</span>
+</div>
+<div class="w-full bg-gray-200 rounded-full h-2">
+<div class="bg-primary h-2 rounded-full" style="width: 75%"></div>
+</div>
+<div class="mt-4 flex justify-between text-sm text-gray-500">
+<span>Location: Silpa Park, Kondapur</span>
+<span>Completion: July 2025</span>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-lg overflow-hidden">
+<img src="assets/images/NIRVANa Building 1.png" alt="Project 2" class="w-full h-64 object-cover">
+<div class="p-6">
+<h3 class="text-xl font-semibold mb-2">Nirvana’s Nandanavam</h3>
+<p class="text-gray-600 mb-4">Praneeth Enclave, Bachupally</p>
+<div class="flex justify-between items-center mb-2">
+<span class="text-gray-500">Progress</span>
+<span class="text-primary">30%</span>
+</div>
+<div class="w-full bg-gray-200 rounded-full h-2">
+<div class="bg-primary h-2 rounded-full" style="width: 45%"></div>
+</div>
+<div class="mt-4 flex justify-between text-sm text-gray-500">
+<span>Location: Bachupally</span>
+<span>Completion: Ongoing... (2026)</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="portfolio" class="py-20">
+<div class="container mx-auto px-6">
+<h2 class="text-4xl font-bold text-center mb-12">Our Portfolio</h2>
+<div class="flex justify-center mb-8">
+<div class="inline-flex bg-gray-100 !rounded-full p-1">
+<button class="filter-btn px-6 py-2 !rounded-full bg-primary text-white" data-filter="all">All</button>
+<button class="filter-btn px-6 py-2 !rounded-full text-gray-600 hover:text-primary" data-filter="residential">Residential</button>
+<button class="filter-btn px-6 py-2 !rounded-full text-gray-600 hover:text-primary" data-filter="commercial">Commercial</button>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+const filterBtns = document.querySelectorAll('.filter-btn');
+const projectCards = document.querySelectorAll('.project-card');
+filterBtns.forEach(btn => {
+btn.addEventListener('click', () => {
+// Remove active class from all buttons
+filterBtns.forEach(b => {
+b.classList.remove('bg-primary', 'text-white');
+b.classList.add('text-gray-600');
+});
+// Add active class to clicked button
+btn.classList.add('bg-primary', 'text-white');
+btn.classList.remove('text-gray-600');
+const filter = btn.getAttribute('data-filter');
+projectCards.forEach(card => {
+if (filter === 'all') {
+card.style.display = 'block';
+return;
+}
+const category = card.querySelector('.bg-primary\\/10').textContent.toLowerCase();
+if (category === filter) {
+card.style.display = 'block';
+} else {
+card.style.display = 'none';
+}
+});
+});
+});
+});
+</script>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="project-card bg-white rounded-lg shadow-lg overflow-hidden">
+<img src="assets/images/Nirvana_Manohara.png" alt="Nirvana's Manohara" class="w-full h-48 object-cover">
+<div class="p-6">
+<div class="flex items-center justify-between mb-4">
+<span class="px-3 py-1 bg-secondary/10 text-primary rounded-full text-sm">Residential</span>
+<span class="text-gray-500 text-sm">Completed: 2023</span>
+</div>
+<h3 class="text-xl font-semibold mb-2">Nirvana's Manohara</h3>
+<div class="flex items-center text-gray-500 text-sm mb-4">
+<i class="ri-map-pin-line mr-2"></i>
+<span>Srinagar Colony, Khammam</span>
+</div>
+<div class="flex items-center text-gray-500 text-sm mb-4">
+<i class="ri-building-4-line mr-2"></i>
+<span>14375 Sft</span>
+</div>
+</div>
+</div>
+<div class="project-card bg-white rounded-lg shadow-lg overflow-hidden">
+<img src="assets/images/Venkata.png" alt="Nirvana's Venkata Lakshmi Nilayam" class="w-full h-48 object-cover">
+<div class="p-6">
+<div class="flex items-center justify-between mb-4">
+<span class="px-3 py-1 bg-secondary/10 text-primary rounded-full text-sm">Residential</span>
+<span class="text-gray-500 text-sm">Completed: 2024</span>
+</div>
+<h3 class="text-xl font-semibold mb-2">Nirvana's Venkata Lakshmi Nilayam</h3>
+<div class="flex items-center text-gray-500 text-sm mb-4">
+<i class="ri-map-pin-line mr-2"></i>
+<span>Silpa Avenue, KPHB Colony</span>
+</div>
+<div class="flex items-center text-gray-500 text-sm mb-4">
+<i class="ri-building-4-line mr-2"></i>
+<span>8000 Sft</span>
+</div>
+</div>
+</div>
+<div class="project-card bg-white rounded-lg shadow-lg overflow-hidden">
+<img src="assets/images/srisurya.png" alt="Nirvana's Sirisurya Nivas" class="w-full h-48 object-cover">
+<div class="p-6">
+<div class="flex items-center justify-between mb-4">
+<span class="px-3 py-1 bg-secondary/10 text-primary rounded-full text-sm">Residential</span>
+<span class="text-gray-500 text-sm">Completed: 2025</span>
+</div>
+<h3 class="text-xl font-semibold mb-2">Nirvana's Sirisurya Nivas</h3>
+<div class="flex items-center text-gray-500 text-sm mb-4">
+<i class="ri-map-pin-line mr-2"></i>
+<span>Viswambara Enclave, KPHB Colony</span>
+</div>
+<div class="flex items-center text-gray-500 text-sm mb-4">
+<i class="ri-building-4-line mr-2"></i>
+<span>8000 Sft</span>
+</div>
+</div>
+</div>
+<div class="project-card bg-white rounded-lg shadow-lg overflow-hidden">
+<img src="assets/images/Thulasi.png" alt="Nirvana's IMR TULASI VANAM" class="w-full h-48 object-cover">
+<div class="p-6">
+<div class="flex items-center justify-between mb-4">
+<span class="px-3 py-1 bg-secondary/10 text-primary rounded-full text-sm">Residential</span>
+<span class="text-gray-500 text-sm">Completed: 2024</span>
+</div>
+<h3 class="text-xl font-semibold mb-2">Nirvana's IMR TULASI VANAM</h3>
+<div class="flex items-center text-gray-500 text-sm mb-4">
+<i class="ri-map-pin-line mr-2"></i>
+<span>Muthangi, Patancheru</span>
+</div>
+<div class="flex items-center text-gray-500 text-sm mb-4">
+<i class="ri-building-4-line mr-2"></i>
+<span>38 Independent Houses (60000 Sft)</span>
+</div>
+</div>
+</div>
+<div class="project-card bg-white rounded-lg shadow-lg overflow-hidden">
+<img src="assets/images/OmWest.png" alt="Nirvana's OMWEST" class="w-full h-48 object-cover">
+<div class="p-6">
+<div class="flex items-center justify-between mb-4">
+<span class="px-3 py-1 bg-secondary/10 text-primary rounded-full text-sm">Residential</span>
+<span class="text-gray-500 text-sm">Completed: 2025</span>
+</div>
+<h3 class="text-xl font-semibold mb-2">Nirvana's OMWEST</h3>
+<div class="flex items-center text-gray-500 text-sm mb-4">
+<i class="ri-map-pin-line mr-2"></i>
+<span>Viswambara Enclave, KPHB Colony</span>
+</div>
+<div class="flex items-center text-gray-500 text-sm mb-4">
+<i class="ri-building-4-line mr-2"></i>
+<span>7200 Sft</span>
+</div>
+</div>
+</div>
+<!-- <div class="project-card bg-white rounded-lg shadow-lg overflow-hidden">
+<img src="https://public.readdy.ai/ai/img_res/8bb8fce2ea28624be9f1629ff31ed6aa.jpg" alt="Nirvana's Dwarakamai" class="w-full h-48 object-cover">
+<div class="p-6">
+<div class="flex items-center justify-between mb-4">
+<span class="px-3 py-1 bg-secondary/10 text-primary rounded-full text-sm">Residential</span>
+<span class="text-gray-500 text-sm">Completed: 2025</span>
+</div>
+<h3 class="text-xl font-semibold mb-2">Nirvana's Dwarakamai</h3>
+<div class="flex items-center text-gray-500 text-sm mb-4">
+<i class="ri-map-pin-line mr-2"></i>
+<span>Viswambara Enclave, KPHB Colony</span>
+</div>
+<div class="flex items-center text-gray-500 text-sm mb-4">
+<i class="ri-building-4-line mr-2"></i>
+<span>16200 Sft</span>
+</div>
+</div>
+</div> -->
+<div class="project-card bg-white rounded-lg shadow-lg overflow-hidden">
+    <img src="assets/images/Dwarakamai.png" alt="Nirvana's Dwarakamai" class="w-full h-48 object-cover">
+    <div class="p-6">
+    <div class="flex items-center justify-between mb-4">
+    <span class="px-3 py-1 bg-secondary/10 text-primary rounded-full text-sm">Residential</span>
+    <span class="text-gray-500 text-sm">Completed: 2025</span>
+    </div>
+    <h3 class="text-xl font-semibold mb-2">Nirvana's Dwarakamai</h3>
+    <div class="flex items-center text-gray-500 text-sm mb-4">
+    <i class="ri-map-pin-line mr-2"></i>
+    <span>Viswambara Enclave, KPHB Colony</span>
+    </div>
+    <div class="flex items-center text-gray-500 text-sm mb-4">
+    <i class="ri-building-4-line mr-2"></i>
+    <span>16200 Sft</span>
+    </div>
+    </div>
+    </div>
+    <div class="project-card bg-white rounded-lg shadow-lg overflow-hidden">
+        <img src="assets/images/Santhoshi.png" alt="Nirvana's Santhoshi" class="w-full h-48 object-cover">
+        <div class="p-6">
+        <div class="flex items-center justify-between mb-4">
+        <span class="px-3 py-1 bg-secondary/10 text-primary rounded-full text-sm">Residential</span>
+        <span class="text-gray-500 text-sm">Completed: 2023</span>
+        </div>
+        <h3 class="text-xl font-semibold mb-2"> Nirvana’s Sri Sai Santhoshi Residency</h3>
+        <div class="flex items-center text-gray-500 text-sm mb-4">
+        <i class="ri-map-pin-line mr-2"></i>
+        <span>Gopal Rao Nagar, KPHB Colony</span>
+        </div>
+        <div class="flex items-center text-gray-500 text-sm mb-4">
+        <i class="ri-building-4-line mr-2"></i>
+        <span> 6000 Sft</span>
+        </div>
+        </div>
+        </div>
+        <div class="project-card bg-white rounded-lg shadow-lg overflow-hidden">
+            <img src="assets/images/Royaedge.png" alt="Nirvana's Dwarakamai" class="w-full h-48 object-cover">
+            <div class="p-6">
+            <div class="flex items-center justify-between mb-4">
+            <span class="px-3 py-1 bg-secondary/10 text-primary rounded-full text-sm">Residential</span>
+            <span class="text-gray-500 text-sm">Completed:  2023</span>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Nirvana’s Royal Edge</h3>
+            <div class="flex items-center text-gray-500 text-sm mb-4">
+            <i class="ri-map-pin-line mr-2"></i>
+            <span>Gopal Rao Nagar, KPHB Colony</span>
+            </div>
+            <div class="flex items-center text-gray-500 text-sm mb-4">
+            <i class="ri-building-4-line mr-2"></i>
+            <span> 12500 Sft</span>
+            </div>
+            </div>
+            </div>
+            <div class="project-card bg-white rounded-lg shadow-lg overflow-hidden">
+                <img src="assets/images/Krest.png" alt="Nirvana's Dwarakamai" class="w-full h-48 object-cover">
+                <div class="p-6">
+                <div class="flex items-center justify-between mb-4">
+                <span class="px-3 py-1 bg-secondary/10 text-primary rounded-full text-sm">Residential</span>
+                <span class="text-gray-500 text-sm">Completed: 2019</span>
+                </div>
+                <h3 class="text-xl font-semibold mb-2"> Nirvana’s Karanam Krest</h3>
+                <div class="flex items-center text-gray-500 text-sm mb-4">
+                <i class="ri-map-pin-line mr-2"></i>
+                <span>Kothaguda, Kondapur</span>
+                </div>
+                <div class="flex items-center text-gray-500 text-sm mb-4">
+                <i class="ri-building-4-line mr-2"></i>
+                <span>8000 Sft</span>
+                </div>
+                </div>
+                </div>
+                <div class="project-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="assets/images/Ayyappa.png" alt="Nirvana's Dwarakamai" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                    <div class="flex items-center justify-between mb-4">
+                    <span class="px-3 py-1 bg-secondary/10 text-primary rounded-full text-sm">Residential</span>
+                    <span class="text-gray-500 text-sm">Completed: 2019</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2"> Nirvana’s Ayyappa Delight</h3>
+                    <div class="flex items-center text-gray-500 text-sm mb-4">
+                    <i class="ri-map-pin-line mr-2"></i>
+                    <span>6th Phase, KPHB Colony</span>
+                    </div>
+                    <div class="flex items-center text-gray-500 text-sm mb-4">
+                    <i class="ri-building-4-line mr-2"></i>
+                    <span>13000 Sft</span>
+                    </div>
+                    </div>
+                    </div>
+                    <div class="project-card bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="assets/images/Green_patels.png" alt="Nirvana's Dwarakamai" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                        <span class="px-3 py-1 bg-secondary/10 text-primary rounded-full text-sm">Residential</span>
+                        <span class="text-gray-500 text-sm">Completed: 2025</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2"> Nirvana’s Green Petals</h3>
+                        <div class="flex items-center text-gray-500 text-sm mb-4">
+                        <i class="ri-map-pin-line mr-2"></i>
+                        <span>3rd, KPHB Colony</span>
+                        </div>
+                        <div class="flex items-center text-gray-500 text-sm mb-4">
+                        <i class="ri-building-4-line mr-2"></i>
+                        <span>1300 Sft</span>
+                        </div>
+                        </div>
+                        </div>
+                        <div class="project-card bg-white rounded-lg shadow-lg overflow-hidden">
+                            <img src="assets/images/East_side.png" alt="Nirvana's Dwarakamai" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                            <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 bg-secondary/10 text-primary rounded-full text-sm">Residential</span>
+                            <span class="text-gray-500 text-sm">Completed: 2024</span>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-2">Nirvana’s Eastside Living</h3>
+                            <div class="flex items-center text-gray-500 text-sm mb-4">
+                            <i class="ri-map-pin-line mr-2"></i>
+                            <span>Viswambara Enclave, KPHB Colony</span>
+                            </div>
+                            <div class="flex items-center text-gray-500 text-sm mb-4">
+                            <i class="ri-building-4-line mr-2"></i>
+                            <span>18500 Sft</span>
+                            </div>
+                            </div>
+                            </div>
+                            <div class="project-card bg-white rounded-lg shadow-lg overflow-hidden">
+                                <img src="assets/images/Urberretreet.png" alt="Nirvana's Dwarakamai" class="w-full h-48 object-cover">
+                                <div class="p-6">
+                                <div class="flex items-center justify-between mb-4">
+                                <span class="px-3 py-1 bg-secondary/10 text-primary rounded-full text-sm">Residential</span>
+                                <span class="text-gray-500 text-sm">Completed: 2024</span>
+                                </div>
+                                <h3 class="text-xl font-semibold mb-2"> Nirvana’s Urban Retreat</h3>
+                                <div class="flex items-center text-gray-500 text-sm mb-4">
+                                <i class="ri-map-pin-line mr-2"></i>
+                                <span>Silpa Park, Kondapur </span>
+                                </div>
+                                <div class="flex items-center text-gray-500 text-sm mb-4">
+                                <i class="ri-building-4-line mr-2"></i>
+                                <span>2500 Sft</span>
+                                </div>
+                                </div>
+                                </div>
+                                <div class="project-card bg-white rounded-lg shadow-lg overflow-hidden">
+                                    <img src="assets/images/Urberretreet.png" alt="Nirvana's Dwarakamai" class="w-full h-48 object-cover">
+                                    <div class="p-6">
+                                    <div class="flex items-center justify-between mb-4">
+                                    <span class="px-3 py-1 bg-secondary/10 text-primary rounded-full text-sm">Residential</span>
+                                    <span class="text-gray-500 text-sm">Completed: 2025</span>
+                                    </div>
+                                    <h3 class="text-xl font-semibold mb-2">Nirvana’s Urban Edge</h3>
+                                    <div class="flex items-center text-gray-500 text-sm mb-4">
+                                    <i class="ri-map-pin-line mr-2"></i>
+                                    <span>Silpa Park, Kondapur</span>
+                                    </div>
+                                    <div class="flex items-center text-gray-500 text-sm mb-4">
+                                    <i class="ri-building-4-line mr-2"></i>
+                                    <span>2500 Sft</span>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    
+</div>
+</div>
+</div>
+</section>
+<section id="why-choose-us" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center mb-4">Why Choose Us</h2>
+        <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">We bring together expertise, innovation, and dedication to deliver exceptional construction solutions.</p>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                   <i class="ri-shield-check-line text-primary text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-4">Quality Assurance</h3>
+                <p class="text-gray-600">Our rigorous quality control processes ensure that every project meets the highest standards of excellence.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                 <i class="ri-timer-line text-primary text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-4">On-Time Delivery</h3>
+                <p class="text-gray-600">We understand the importance of timelines and consistently deliver projects on schedule.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                 <i class="ri-leaf-line text-primary text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-4">Sustainable Practices</h3>
+                <p class="text-gray-600">We incorporate eco-friendly materials and sustainable construction practices in all our projects.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="contact" class="py-20">
+<div class="container mx-auto px-6">
+<div class="grid md:grid-cols-2 gap-12">
+<div>
+<h2 class="text-4xl font-bold mb-8">Get in Touch</h2>
+<form class="space-y-6">
+<div>
+<label class="block text-gray-700 mb-2">Name</label>
+<input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-primary">
+</div>
+<div>
+<label class="block text-gray-700 mb-2">Email</label>
+<input type="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-primary">
+</div>
+<div>
+<label class="block text-gray-700 mb-2">Message</label>
+<textarea class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-primary" rows="4"></textarea>
+</div>
+<button class="bg-primary text-white px-6 py-3 !rounded-button hover:bg-blue-600 transition duration-300">Send Message</button>
+</form>
+</div>
+<div>
+<div class="mb-8">
+<h3 class="text-xl font-semibold mb-4">Contact Information</h3>
+<div class="space-y-4">
+<div class="flex items-center">
+<i class="ri-map-pin-line text-primary text-xl"></i>
+<span class="ml-4">Hyderabad</span>
+</div>
+<div class="flex items-center">
+<i class="ri-phone-line text-primary text-xl"></i>
+<span class="ml-4">8889996650</span>
+</div>
+<div class="flex items-center">
+<i class="ri-mail-line text-primary text-xl"></i>
+<span class="ml-4">nirvanasbuilders@gmail.com</span>
+</div>
+</div>
+</div>
+<div class="h-64 rounded-lg overflow-hidden">
+<img src="assets/images/NIRVANa Building 1.png" alt="Map" class="w-full h-full object-cover">
+</div>
+</div>
+</div>
+</div>
+</section>
+<footer class="bg-primary text-white py-12">
+<div class="container mx-auto px-6">
+<div class="grid md:grid-cols-4 gap-8">
+<div>
+<div class="font-['Pacifico'] text-2xl mb-4"><img src="assets/images/Nirvana_builders.webp" width="100px" height="100px" alt="logo"></a></div>
+<p class="text-gray-400">Building excellence, delivering dreams.</p>
+</div>
+<div>
+<h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+<ul class="space-y-2">
+<li><a href="#" class="text-gray-400 hover:text-white">About Us</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white">Services</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white">Projects</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-semibold mb-4">Services</h4>
+<ul class="space-y-2">
+<li><a href="#" class="text-gray-400 hover:text-white">Residential</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white">Commercial</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white">Renovation</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white">Interior Design</a></li>
+</ul>
+</div>
+<!-- <div>
+<h4 class="text-lg font-semibold mb-4">Newsletter</h4>
+<p class="text-gray-400 mb-4">Subscribe to our newsletter for updates.</p>
+<div class="flex">
+<input type="email" placeholder="Your email" class="px-4 py-2 rounded-l-lg w-full">
+<button class="bg-primary px-4 py-2 !rounded-r-lg hover:bg-blue-600">Subscribe</button>
+</div>
+</div> -->
+</div>
+<div class="border-t border-secondary/20 mt-12 pt-8 text-center text-gray-400">
+<p>&copy; 2025 nirvanabuildders. All rights reserved.</p>
+</div>
+</div>
+</footer>
+<a href="https://wa.me/918885554050" class="whatsapp-link" target="_blank">
+    <img class="whatsapp-img" src="assets/images/whatsapp_img.png" width="100" height="100" alt="WhatsApp Icon" class="whatsapp-image">
+  </a>
+  <div id="contactModal" class="fixed inset-0 bg-black/50 flex items-center justify-center z-50 hidden">
+    <div class="bg-white rounded-lg p-8 max-w-3xl w-full mx-4 animate-scaleIn">
+    <div class="flex justify-between items-center mb-6">
+    <h3 class="text-2xl font-semibold text-primary">Schedule a Site Visit</h3>
+    <button onclick="hideContactModal()" class="text-gray-400 hover:text-gray-600">
+    <i class="ri-close-line text-2xl"></i>
+    </button>
+    </div>
+    <form id="modalEnrollmentForm" method="post" autocomplete="off" name="modal-google-sheet" class="grid md:grid-cols-2 gap-6">
+      <div>
+        <label for="modal-name" id="modal-nameLabel" class="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
+        <input type="text" id="modal-name" name="name" class="w-full px-4 py-2 border rounded focus:ring-2 focus:ring-primary/20 focus:border-primary" required>
+      </div>
+      <div>
+        <label for="modal-email" id="modal-emailLabel" class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+        <input id="modal-email" name="email" type="email" class="w-full px-4 py-2 border rounded focus:ring-2 focus:ring-primary/20 focus:border-primary" required>
+      </div>
+      <div>
+        <label for="modal-mobile" id="modal-mobileLabel" class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+        <input id="modal-mobile" name="mobile" type="tel" class="w-full px-4 py-2 border rounded focus:ring-2 focus:ring-primary/20 focus:border-primary" required>
+      </div>
+      <div>
+        <label for="modal-date" id="modal-dateLabel" class="block text-sm font-medium text-gray-700 mb-2">Preferred Visit Date</label>
+        <input id="modal-date" name="date" type="date" class="w-full px-4 py-2 border rounded focus:ring-2 focus:ring-primary/20 focus:border-primary" required>
+      </div>
+      <div class="md:col-span-2">
+        <label for="modal-message" id="modal-messageLabel" class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+        <textarea id="modal-message" name="message" class="w-full px-4 py-2 border rounded focus:ring-2 focus:ring-primary/20 focus:border-primary h-32" required></textarea>
+      </div>
+      <div class="md:col-span-2">
+        <button type="submit" class="!rounded-button bg-primary text-white px-8 py-3 w-full hover:bg-primary/90 whitespace-nowrap">
+                Schedule My Visit
+        </button>
+      </div>
+    </form>
+    </div>
+    </div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+const nav = document.querySelector('nav');
+window.addEventListener('scroll', function() {
+if (window.scrollY > 50) {
+nav.classList.add('shadow-md');
+} else {
+nav.classList.remove('shadow-md');
+}
+});
+});
+</script>
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/67c9420dccdb25190db75103/1ill2k236';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+    <!--End of Tawk.to Script-->
+    <script>
+        // Main form submission handler
+        document
+         .getElementById("mainEnrollmentForm")
+         .addEventListener("submit", async function (event) {
+           event.preventDefault();
+       
+           const form = this;
+           const submitButton = form.querySelector('button[type="submit"]');
+           const originalButtonText = submitButton.innerHTML;
+       
+           // Get form elements
+           const formElements = {
+             name: document.getElementById("main-name"),
+             mobile: document.getElementById("main-mobile"),
+             email: document.getElementById("main-email"),
+             date: document.getElementById("main-date"),
+             message: document.getElementById("main-message"),
+           };
+       
+           // Reset previous error states
+           Object.keys(formElements).forEach((key) => {
+             const element = formElements[key];
+             const labelId = `main-${key}Label`;
+             if (element && document.getElementById(labelId)) {
+               resetErrorState(element, labelId);
+             }
+           });
+       
+           // Validate form
+           let isValid = true;
+           Object.entries(formElements).forEach(([key, element]) => {
+             if (!element || !element.value.trim()) {
+               if (element && document.getElementById(`main-${key}Label`)) {
+                 setErrorState(element, `main-${key}Label`);
+               }
+               isValid = false;
+             }
+           });
+       
+           if (!isValid) {
+             alert("Please fill in all required fields.");
+             return;
+           }
+       
+           try {
+             // Show loading state
+             submitButton.disabled = true;
+             submitButton.innerHTML = '<span class="spinner"></span> Submitting...';
+       
+             const scriptURL =
+               "https://script.google.com/macros/s/AKfycbyW4kyVg0HByok4Tw28Y3lECsA87LUiZ-1-Q4i_3-5_533GajAgaBJoOdZ923jOtTV7/exec";
+       
+             // Add timeout to ensure minimum loading time for better UX
+             const [response] = await Promise.all([
+               fetch(scriptURL, {
+                 method: "POST",
+                 body: new FormData(form),
+               }),
+               new Promise((resolve) => setTimeout(resolve, 800)), // Minimum 800ms loading time
+             ]);
+       
+             if (!response.ok) {
+               throw new Error("Network response was not ok");
+             }
+       
+             // Success
+             alert("Thanks for contacting us! We will get back to you soon.");
+             form.reset();
+           } catch (error) {
+             console.error("Error!", error.message);
+             alert("There was an error submitting the form. Please try again.");
+           } finally {
+             // Reset button state
+             submitButton.disabled = false;
+             submitButton.innerHTML = originalButtonText;
+           }
+         });
+      
+        // Modal form submission handler
+        document
+         .getElementById("modalEnrollmentForm")
+         .addEventListener("submit", async function (event) {
+           event.preventDefault();
+       
+           const form = this;
+           const submitButton = form.querySelector('button[type="submit"]');
+           const originalButtonText = submitButton.innerHTML;
+       
+           // Get form elements
+           const formElements = {
+             name: document.getElementById("modal-name"),
+             mobile: document.getElementById("modal-mobile"),
+             email: document.getElementById("modal-email"),
+             date: document.getElementById("modal-date"),
+             message: document.getElementById("modal-message"),
+           };
+       
+           // Reset previous error states
+           Object.keys(formElements).forEach((key) => {
+             const element = formElements[key];
+             const labelId = `modal-${key}Label`;
+             if (element && document.getElementById(labelId)) {
+               resetErrorState(element, labelId);
+             }
+           });
+       
+           // Validate form
+           let isValid = true;
+           Object.entries(formElements).forEach(([key, element]) => {
+             if (!element || !element.value.trim()) {
+               if (element && document.getElementById(`modal-${key}Label`)) {
+                 setErrorState(element, `modal-${key}Label`);
+               }
+               isValid = false;
+             }
+           });
+       
+           if (!isValid) {
+             alert("Please fill in all required fields.");
+             return;
+           }
+       
+           try {
+             // Show loading state
+             submitButton.disabled = true;
+             submitButton.innerHTML = '<span class="spinner"></span> Submitting...';
+       
+             const scriptURL =
+               "https://script.google.com/macros/s/AKfycbyW4kyVg0HByok4Tw28Y3lECsA87LUiZ-1-Q4i_3-5_533GajAgaBJoOdZ923jOtTV7/exec";
+       
+             // Add timeout to ensure minimum loading time for better UX
+             const [response] = await Promise.all([
+               fetch(scriptURL, {
+                 method: "POST",
+                 body: new FormData(form),
+               }),
+               new Promise((resolve) => setTimeout(resolve, 800)), // Minimum 800ms loading time
+             ]);
+       
+             if (!response.ok) {
+               throw new Error("Network response was not ok");
+             }
+       
+             // Success
+             hideContactModal();
+             alert("Thanks for contacting us! We will get back to you soon.");
+             form.reset();
+           } catch (error) {
+             console.error("Error!", error.message);
+             alert("There was an error submitting the form. Please try again.");
+           } finally {
+             // Reset button state
+             submitButton.disabled = false;
+             submitButton.innerHTML = originalButtonText;
+           }
+         });
+       
+       function setErrorState(element, labelId) {
+         element.classList.add("error-input");
+         const label = document.getElementById(labelId);
+         if (label) {
+           label.classList.add("error-label");
+         }
+       }
+       
+       function resetErrorState(element, labelId) {
+         element.classList.remove("error-input");
+         const label = document.getElementById(labelId);
+         if (label) {
+           label.classList.remove("error-label");
+         }
+       }
+       
+       // Add this CSS to your stylesheet
+       const style = document.createElement("style");
+       style.textContent = `
+       .spinner {
+       display: inline-block;
+       width: 20px;
+       height: 20px;
+       border: 3px solid rgba(255,255,255,.3);
+       border-radius: 50%;
+       border-top-color: #fff;
+       animation: spin 1s ease-in-out infinite;
+       margin-right: 8px;
+       }
+       
+       @keyframes spin {
+       to { transform: rotate(360deg); }
+       }
+       
+       .error-input {
+       border-color: #dc3545;
+       }
+       
+       .error-label {
+       color: #dc3545;
+       }
+       `;
+       document.head.appendChild(style);
+       
+       function showContactModal() {
+         document.getElementById("contactModal").classList.remove("hidden");
+         document.body.style.overflow = "hidden";
+       }
+       function hideContactModal() {
+         document.getElementById("contactModal").classList.add("hidden");
+         document.body.style.overflow = "";
+       }
+       document
+         .getElementById("contactFormModal")
+         ?.addEventListener("submit", function (e) {
+           e.preventDefault();
+           const formData = new FormData(this);
+           const data = {};
+           formData.forEach((value, key) => (data[key] = value));
+       
+           hideContactModal();
+       
+           const successModal = document.createElement("div");
+           successModal.className =
+             "fixed inset-0 bg-black/50 flex items-center justify-center z-50";
+           successModal.innerHTML = `
+           <div class="bg-white rounded-lg p-8 max-w-md w-full mx-4 animate-scaleIn">
+             <h3 class="text-2xl font-semibold text-primary mb-4">Thank You!</h3>
+             <p class="text-gray-600 mb-6">We have received your request and will contact you shortly to confirm your site visit.</p>
+             <button onclick="this.closest('.fixed').remove(); document.body.style.overflow = '';" class="!rounded-button bg-primary text-white px-6 py-2 w-full hover:bg-primary/90">
+               Close
+             </button>
+           </div>
+         `;
+           document.body.appendChild(successModal);
+           this.reset();
+         });
+       // Intersection Observer for scroll animations
+       const observer = new IntersectionObserver(
+         (entries) => {
+           entries.forEach((entry) => {
+             if (entry.isIntersecting) {
+               entry.target.style.animationPlayState = "running";
+             }
+           });
+         },
+         {
+           threshold: 0.1,
+         }
+       );
+       document.addEventListener("DOMContentLoaded", function () {
+         // Add animation classes to section titles
+         document.querySelectorAll("section h2").forEach((title) => {
+           title.classList.add("animate-fadeInUp");
+           title.style.animationPlayState = "paused";
+           observer.observe(title);
+         });
+         // Add animation to grid items
+         document.querySelectorAll(".grid > div").forEach((item, index) => {
+           item.classList.add("animate-scaleIn");
+           item.style.animationPlayState = "paused";
+           item.style.animationDelay = `${index * 0.02}s`;
+           observer.observe(item);
+         });
+       });
+       document
+         .getElementById("contactForm")
+         ?.addEventListener("submit", function (e) {
+           e.preventDefault();
+           const formData = new FormData(this);
+           const data = {};
+           formData.forEach((value, key) => (data[key] = value));
+           const successModal = document.createElement("div");
+           successModal.className =
+             "fixed inset-0 bg-black/50 flex items-center justify-center z-50";
+           successModal.innerHTML = `
+       <div class="bg-white rounded-lg p-8 max-w-md w-full mx-4">
+       <h3 class="text-2xl font-semibold text-primary mb-4">Thank You!</h3>
+       <p class="text-gray-600 mb-6">We have received your request and will contact you shortly to confirm your site visit.</p>
+       <button onclick="this.closest('.fixed').remove()" class="!rounded-button bg-primary text-white px-6 py-2 w-full hover:bg-primary/90">
+       Close
+       </button>
+       </div>
+       `;
+           document.body.appendChild(successModal);
+           this.reset();
+         });
+       </script>
+       <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          // Counter animation
+          const counters = document.querySelectorAll('.counter');
+          counters.forEach(counter => {
+            const target = parseInt(counter.getAttribute('data-target'));
+            const duration = 2000; // 2 seconds
+            const increment = target / (duration / 16); // 60fps
+            let current = 0;
+            const updateCounter = () => {
+              current += increment;
+              if (current < target) {
+                counter.textContent = Math.round(current);
+                requestAnimationFrame(updateCounter);
+              } else {
+                counter.textContent = target;
+              }
+            };
+            const observer = new IntersectionObserver((entries) => {
+              if (entries[0].isIntersecting) {
+                updateCounter();
+                observer.unobserve(counter);
+              }
+            });
+            observer.observe(counter);
+          });
+        
+          // Initialize AOS
+          if (typeof AOS !== 'undefined') {
+            AOS.init({
+              duration: 1000,
+              once: true,
+              offset: 100
+            });
+          } else {
+            console.warn('AOS library not loaded. Make sure to include it in your HTML.');
+          }
+        
+          // Navigation scroll effect
+          const nav = document.querySelector('nav');
+          if (nav) {
+            window.addEventListener('scroll', function() {
+              if (window.scrollY > 50) {
+                nav.classList.add('shadow-md', 'backdrop-blur-md', 'bg-white/90');
+                nav.classList.remove('bg-white');
+              } else {
+                nav.classList.remove('shadow-md', 'backdrop-blur-md', 'bg-white/90');
+                nav.classList.add('bg-white');
+              }
+            });
+          }
+        
+          // Scroll progress bar
+          const scrollProgress = document.querySelector('.scroll-progress');
+          if (scrollProgress) {
+            window.addEventListener('scroll', () => {
+              const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+              scrollProgress.style.width = `${scrollPercent}%`;
+            });
+          }
+        
+          // Custom cursor
+          const cursor = document.querySelector('.custom-cursor');
+          if (cursor) {
+            document.addEventListener('mousemove', (e) => {
+              cursor.style.left = e.clientX + 'px';
+              cursor.style.top = e.clientY + 'px';
+            });
+            document.querySelectorAll('a, button').forEach(element => {
+              element.addEventListener('mouseenter', () => cursor.classList.add('hover'));
+              element.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
+            });
+          }
+        
+          // GSAP Animations
+          if (typeof gsap !== 'undefined') {
+            // Check if ScrollTrigger plugin is available
+            if (typeof ScrollTrigger !== 'undefined') {
+              gsap.registerPlugin(ScrollTrigger);
+            } else {
+              console.warn('GSAP ScrollTrigger plugin not loaded.');
+            }
+        
+            // Hero section animation
+            const heroContent = document.querySelector('.hero-content');
+            if (heroContent) {
+              gsap.from('.hero-content', {
+                opacity: 0,
+                y: 100,
+                duration: 1,
+                ease: 'power3.out'
+              });
+            }
+        
+            
+        
+            // Project cards animation
+            const projectSection = document.querySelector('#portfolio');
+            const projectCards = document.querySelectorAll('.project-card');
+            if (projectSection && projectCards.length > 0) {
+              gsap.from('.project-card', {
+                scrollTrigger: {
+                  trigger: '#portfolio',
+                  start: 'top center'
+                },
+                opacity: 0,
+                y: 50,
+                duration: 0.8,
+                stagger: 0.2
+              });
+            }
+          } else {
+            console.warn('GSAP library not loaded. Make sure to include it in your HTML.');
+          }
+        
+        });
+        </script>
+</body>
+</html>
