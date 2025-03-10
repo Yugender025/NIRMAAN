@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BuildMaster Pro - Premium Construction Services</title>
+<title>NirvanaBuilders - Premium Construction Services</title>
 <link rel="stylesheet" href="assets/css/styles.css">
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -52,9 +52,9 @@
 <nav class="fixed w-full bg-white shadow-md z-50">
 <div class="container mx-auto px-6 py-4">
 <div class="flex items-center justify-between">
-<div class="font-['Pacifico'] text-3xl text-primary"> <a href="#" class="font-['Pacifico'] text-3xl text-primary"><img src="assets/images/Nirvana_builders.webp" width="100px" height="100px" alt="logo"></a></div>
+<div class="font-['Pacifico'] text-3xl text-primary"> <a href="index.html" class="font-['Pacifico'] text-3xl text-primary"><img src="assets/images/Nandhanavanam Logo.png" width="100px" height="100px" alt="logo"></a></div>
 <div class="hidden md:flex space-x-8">
-<a href="#home" class="text-gray-700 hover:text-primary">Home</a>
+<a href="index.html" class="text-gray-700 hover:text-primary">Home</a>
 <a href="#about" class="text-gray-700 hover:text-primary">About</a>
 <a href="#services" class="text-gray-700 hover:text-primary">Services</a>
 <a href="#projects" class="text-gray-700 hover:text-primary">Projects</a>
@@ -69,7 +69,9 @@
     <div class="container mx-auto px-6 relative z-10">
         <div class="max-w-3xl">
             <h1 class="text-5xl font-bold text-white mb-6">Building Tomorrow's Landmarks Today</h1>
-            <p class="text-xl text-white mb-8">Excellence in construction with over 25 years of industry expertise. We transform visions into reality.</p>
+            <p class="text-xl text-white mb-8">
+
+              Crafting timeless spaces with quality, innovation, and sustainability to shape a better future.</p>
             <button onclick="showContactModal()" class="bg-primary text-white px-8 py-3 !rounded-button hover:bg-blue-600 transition duration-300 text-lg">Start Your Project</button>
         </div>
     </div>
@@ -81,8 +83,8 @@
     <img src="assets/images/builderpro_img.jpg" alt="About Us" class="rounded-lg shadow-xl">
     </div>
     <div>
-    <h2 class="text-4xl font-bold mb-6">Building Excellence Since 2000</h2>
-    <p class="text-gray-600 mb-6">With over two decades of experience in the construction industry, BuildMaster Pro has established itself as a leader in delivering exceptional construction services. Our commitment to quality, innovation, and customer satisfaction has earned us the trust of countless clients.</p>
+    <h2 class="text-4xl font-bold mb-6">Crafting Your Future, One Brick at a Time</h2>
+    <p class="text-gray-600 mb-6">Nirvana Builders & Developers is dedicated to responsible business practices, where success is measured not just in numbers but in the values that drive them. With a strong focus on sustainability, growth, and customer satisfaction, we strive to create developments that stand the test of time. Our commitment to excellence ensures that we exceed expectations, delivering projects that enhance communities and enrich lives.</p>
     <div class="grid grid-cols-2 gap-6 mb-8">
     <div class="flex items-center">
     <div class="w-12 h-12 flex items-center justify-center bg-primary rounded-full text-white">
@@ -541,20 +543,32 @@ card.style.display = 'none';
 <div class="grid md:grid-cols-2 gap-12">
 <div>
 <h2 class="text-4xl font-bold mb-8">Get in Touch</h2>
-<form class="space-y-6">
-<div>
-<label class="block text-gray-700 mb-2">Name</label>
-<input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-primary">
-</div>
-<div>
-<label class="block text-gray-700 mb-2">Email</label>
-<input type="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-primary">
-</div>
-<div>
-<label class="block text-gray-700 mb-2">Message</label>
-<textarea class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-primary" rows="4"></textarea>
-</div>
-<button class="bg-primary text-white px-6 py-3 !rounded-button hover:bg-blue-600 transition duration-300">Send Message</button>
+<form id="mainEnrollmentForm" method="post" autocomplete="off" name="main-google-sheet" class="grid md:grid-cols-2 gap-6">
+  <div>
+    <label for="main-name" id="main-nameLabel" class="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
+    <input type="text" id="main-name" name="name" class="w-full px-4 py-2 border rounded focus:ring-2 focus:ring-primary/20 focus:border-primary" required>
+  </div>
+  <div>
+    <label for="main-email" id="main-emailLabel" class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+    <input id="main-email" name="email" type="email" class="w-full px-4 py-2 border rounded focus:ring-2 focus:ring-primary/20 focus:border-primary" required>
+  </div>
+  <div>
+    <label for="main-mobile" id="main-mobileLabel" class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+    <input id="main-mobile" name="mobile" type="tel" class="w-full px-4 py-2 border rounded focus:ring-2 focus:ring-primary/20 focus:border-primary" required>
+  </div>
+  <div>
+    <label for="main-date" id="main-dateLabel" class="block text-sm font-medium text-gray-700 mb-2">Preferred Visit Date</label>
+    <input id="main-date" name="date" type="date" class="w-full px-4 py-2 border rounded focus:ring-2 focus:ring-primary/20 focus:border-primary" required>
+  </div>
+  <div class="md:col-span-2">
+    <label for="main-message" id="main-messageLabel" class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+    <textarea id="main-message" name="message" class="w-full px-4 py-2 border rounded focus:ring-2 focus:ring-primary/20 focus:border-primary h-32" required></textarea>
+  </div>
+  <div class="md:col-span-2">
+    <button type="submit" class="!rounded-button bg-primary text-white px-8 py-3 w-full hover:bg-primary/90 whitespace-nowrap">
+            Schedule My Visit
+    </button>
+  </div>
 </form>
 </div>
 <div>
@@ -563,20 +577,21 @@ card.style.display = 'none';
 <div class="space-y-4">
 <div class="flex items-center">
 <i class="ri-map-pin-line text-primary text-xl"></i>
-<span class="ml-4">Hyderabad</span>
+<span class="ml-4">PLOT No HIG-86, AYYAPPA DELIGHT, 
+  6Th PHASE, KPHB COLONY, HYDEERABAD-50085</span>
 </div>
 <div class="flex items-center">
 <i class="ri-phone-line text-primary text-xl"></i>
-<span class="ml-4">8889996650</span>
+<span class="ml-4"> 9059337011</span>
 </div>
 <div class="flex items-center">
 <i class="ri-mail-line text-primary text-xl"></i>
-<span class="ml-4">nirvanasbuilders@gmail.com</span>
+<span class="ml-4">nirvanabuildersdevelelopers@gmail.com</span>
 </div>
 </div>
 </div>
 <div class="h-64 rounded-lg overflow-hidden">
-<img src="assets/images/NIRVANa Building 1.png" alt="Map" class="w-full h-full object-cover">
+  <iframe class="w-full h-full object-cover" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d170.63719615492735!2d78.38658494979951!3d17.487154223566097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb91655ddfaaed%3A0x5cd14cb95e8f05fb!2sAyyappa%20Delight%2C%20HIG%2086%2C%20K%20P%20H%20B%20Phase%206%2C%20Kukatpally%2C%20Hyderabad%2C%20Telangana%20500085!5e1!3m2!1sen!2sin!4v1741581003732!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> 
 </div>
 </div>
 </div>
@@ -586,7 +601,7 @@ card.style.display = 'none';
 <div class="container mx-auto px-6">
 <div class="grid md:grid-cols-4 gap-8">
 <div>
-<div class="font-['Pacifico'] text-2xl mb-4"><img src="assets/images/Nirvana_builders.webp" width="100px" height="100px" alt="logo"></a></div>
+<div class="font-['Pacifico'] text-2xl mb-4"><img src="assets/images/Nandhanavanam Logo.png" width="100px" height="100px" alt="logo"></a></div>
 <p class="text-gray-400">Building excellence, delivering dreams.</p>
 </div>
 <div>
@@ -617,7 +632,7 @@ card.style.display = 'none';
 </div> -->
 </div>
 <div class="border-t border-secondary/20 mt-12 pt-8 text-center text-gray-400">
-<p>&copy; 2025 nirvanabuildders. All rights reserved.</p>
+<p><span><a target="_blank" href="https://digitalwin.in/">Designed by Digital win Technologies</a></span>© 2025 NirvanaBuilders. All rights reserved.</p>
 </div>
 </div>
 </footer>
